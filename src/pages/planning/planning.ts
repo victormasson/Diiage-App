@@ -31,6 +31,7 @@ export class PlanningPage {
   async getCours() {
     await this.restProvider.getCours().subscribe(data => {
       this.cours = data;
+      this.loadEvents();
     });
   }
 
@@ -74,7 +75,7 @@ export class PlanningPage {
       let timeEnd = new Date(c.enddate);
 
       events.push({
-        title: c.title,
+        title: c.title + ' | ' + c.category,
         startTime: timeStart,
         endTime: timeEnd,
         allDay: false
