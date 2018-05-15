@@ -7,19 +7,12 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Details</ion-title>
+    <ion-title>{{article.node_title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <ion-list inset>
-    <ion-item *ngFor="let article of articles">
-      <h2>{{article.node_title}}</h2>
-      <ion-avatar item-left>
-        <img src="{{article.imageactu}}">
-      </ion-avatar>
-      <p>{{article.contenutexte}}</p>
-    </ion-item>
-  </ion-list>
+  <p>{{article.contenutexte}}</p>
+  <img src="{{article.imageactu}}" />
 </ion-content>

@@ -44,8 +44,7 @@ export class ArticlesPage {
     });
   }
 
-  loadActu(article : ArticleModel){
-    // alert("click sur " + article.node_title);
-    this.navCtrl.push(DetailsPage, { curActu:article });
+  loadArticle(article : ArticleModel){
+    this.navCtrl.push(DetailsPage, { currentArticle:article });
   }
 }
